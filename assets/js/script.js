@@ -1,3 +1,18 @@
+let menuMobile = document.querySelector('.menu-mobile');
+let menuModified = document.querySelector('ul.header-menu')
+menuMobile.addEventListener('click', () => {
+    if (menuModified.style.visibility == 'visible' && menuModified.style.opacity == '0.8') {
+        menuModified.style.visibility = 'hidden';
+        menuModified.style.opacity = '0';
+}
+ else {
+         menuModified.style.visibility = 'visible'
+         menuModified.style.opacity = '0.8'
+    }
+})
+
+
+
 let buttomLeft = document.getElementById('left');
 let buttomRight = document.getElementById('right');
 let container = document.querySelector('.container');
@@ -33,6 +48,6 @@ buttomLeft.addEventListener('click', () => {
     list.style.setProperty('--calculation', -1)
     active = active - 1 < firstPosition ? lastPosition : active - 1;
     setSlider()
-    
+
     items[active].classList.add('active')
 })
