@@ -36,8 +36,19 @@ header {
     & nav {
         & .menu-mobile {
             display: none;
+            flex-direction: column;
+            gap: 7px;
+            border: 1px solid rgba(225,255, 255, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            
+            & .menu-edit {
+                width: 2.3em;
+                height: 3px;
+                background-color: #fff;
+                border-radius: 25px;
+            }
         }
-
         & ul {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -49,9 +60,21 @@ header {
                     padding: 0 10px;
                     display: inline-block;
                     transition: 0.5s linear ;
-                    &:hover {
-                        border-bottom: 2px solid #000;
+                    position: relative;
+                    &::after {
+                        content: ' ';
+                        width: 0%;
+                        height: 1px;
+                        background-color: #000;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transition: 0.5s linear;
                     }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    
                 }
             }
         }
@@ -376,15 +399,6 @@ section {
             transition: 0.5s;
             & .menu-mobile {
                 display: flex;
-                flex-direction: column;
-                gap: 7px;
-
-                & .menu-edit {
-                    width: 3em;
-                    height: 3px;
-                    background-color: #fff;
-                    border-radius: 25px;
-                }
             }
 
             & ul {
