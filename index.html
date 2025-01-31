@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
         </style>
     <title>Car Selection</title>
 </head>
@@ -20,18 +20,56 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="container">
         <div class="list">
-            <div class="item">
+            <div class="item active">
                 <div class="area-car">
                     <img src="assets/images/porshe.png" alt="Image car">
                 </div>
                 <div class="content">
                     <p class="car-information">
-                        Único dono
+                        2023
                     </p>
                     <h2>
-                        Porsche
+                        911 Turbo
+                    </h2>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam, quaerat ratione at recusandae quod hic est consequatur culpa earum! Quos tenetur perferendis ipsam, non nostrum officiis molestiae amet. Voluptatibus.
+                    </p>
+                    <button class="information">
+                        Saiba mais
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="area-car">
+                    <img src="assets/images/ferrari.png" alt="Image car">
+                </div>
+                <div class="content">
+                    <p class="car-information">
+                        2023
+                    </p>
+                    <h2>
+                        Ferrari
+                    </h2>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam, quaerat ratione at recusandae quod hic est consequatur culpa earum! Quos tenetur perferendis ipsam, non nostrum officiis molestiae amet. Voluptatibus.
+                    </p>
+                    <button class="information">
+                        Saiba mais
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="area-car">
+                    <img src="assets/images/lamborghini.png" alt="Image car">
+                </div>
+                <div class="content">
+                    <p class="car-information">
+                        
+                    </p>
+                    <h2>
+                        Lamborghini
                     </h2>
                     <p class="description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam, quaerat ratione at recusandae quod hic est consequatur culpa earum! Quos tenetur perferendis ipsam, non nostrum officiis molestiae amet. Voluptatibus.
@@ -43,8 +81,8 @@
             </div>
         </div>
         <div class="arrows">
-            <button><img src="assets/images/arrow.png" alt="seta esquerda"></button>
-            <button><img src="assets/images/arrow.png" alt="seta direita"></button>
+            <button id="left"><img src="assets/images/arrow.png" alt="seta esquerda"></button>
+            <button id="right"><img src="assets/images/arrow.png" alt="seta direita"></button>
         </div>
         <div class="indicators">
             <div class="number">01</div>
@@ -55,5 +93,6 @@
             </ul>
         </div>
     </section>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

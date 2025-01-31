@@ -74,8 +74,11 @@ section {
                         font-weight: bold;
                     }
                     & h2 {
+                        font-family: 'league gothic', sans-serif;
                         font-size: 3.5em;
                         line-height: 1em;
+                        margin-top: 0.9em;
+                        letter-spacing: 2px;
                     }
                     & .description {
                         color: #e9e9e9;
@@ -89,27 +92,25 @@ section {
                         width: 120px;
                         text-transform: uppercase;
                         border: 1px solid #020088;
-                        background-color: #068ae2;
-                        color: #000;
+                        background-color: #000;
+                        color: #fff;
                         cursor: pointer;
                         font-weight: bold;
-                    }
-                    
-                }
-                &::before {
-                    content: '';
-                    position: absolute;
-                    height: 200px;
-                    width: 100%;
-                    top: 50%;
-                    border-top: 1px solid #fff ;
-                }
+                    }   
+                } 
             }
-
+            &::before {
+                content: '';
+                position: absolute;
+                height: 200px;
+                width: 100%;
+                top: 50%;
+                border-top: 1px solid #fff ;
+            }
     }
     .indicators {
         position: absolute;
-        top: 50%;
+        top: 65%;
         left: 50%;
         transform: translateX(-50%);
         width: 90vw;
@@ -119,7 +120,8 @@ section {
         gap: 12px;
         & .number {
             font-size: 4em;
-            letter-spacing: -5px;
+            font-family: league gothic, sans-serif;
+            
         }
         & ul {
             display:flex;
@@ -127,7 +129,7 @@ section {
             & li {
                 width: 40px;
                 height: 4px;
-                background-color: #068ae2;
+                background-color: #000;
                 border-radius: 3px;
                 transition: 0.5s;
             }
@@ -165,5 +167,56 @@ section {
             transform: scale(-1);
         }
         
+    }
+}
+
+
+& section {
+    & .list {
+    --calculation: 1;
+    
+        & .item {
+            transform: translateX(calc(100vw * var(--calculation)));
+            transition: 0.5s;
+            opacity: 0;
+            & .area-car {
+                & img {
+                    transform:rotate(0);
+                    transition: 0.5s;
+                    transition-delay: 0.5s;
+                }
+            }
+        }
+        & .content {
+            & .car-information,h2,.description,.information {
+                transform: translateX(calc(200px * var(--calculation)));
+                transition: 0.7s;
+                transition-delay: 0.5s;
+                opacity: 0;
+            }
+            & h2 {
+                transition-delay: 0.5s;
+            }
+            &.description {
+                transition-delay: 0.7s;
+            }
+            &.information {
+                transition-delay: 0.9s;
+            }
+        }
+        & .active {
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+            & .area-car {
+                & img {
+                    transform:rotate(-20deg);
+                }
+            }
+            & .car-information,h2,.description,.information {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     }
 }
