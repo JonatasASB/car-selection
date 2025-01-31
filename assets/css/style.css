@@ -7,7 +7,9 @@
     text-decoration: none;
     font-family: montserrat, sans-serif;
 }
-
+html {
+    overflow-x: hidden;
+}
 body {
     font-size: 16px;
     color: #fff;
@@ -191,7 +193,7 @@ section {
         transform: translate(-50%, -21px);
         display: flex;
         justify-content: space-around;
-        gap: 530px;
+        gap: 600px;
 
         & button {
             top: 60%;
@@ -205,9 +207,8 @@ section {
                 margin-top: 4px;
                 width: 20px;
             }
-
-            &:hover {
-                background-color: rgba(0, 0, 0, 0.15);
+            &:active {
+                background-color: rgba(1, 0, 136, 0.8);
             }
         }
 
@@ -294,6 +295,7 @@ section {
 
 @media (max-width: 900px) {
     header {
+
         gap: 0;
     }
 
@@ -431,20 +433,21 @@ section {
                     }
                 }
             }        
-            & .active {
+            & .item.active {
                 & .area-car {
+                    transform: translate(-10px, -60%);
+                    & img {
+                        width: 75%;
+                        transform: rotate(-40deg);
+                    }
                     &::before {
                         height: 60px;
                         width: 40%;
                         filter: blur(40px);
                         left: 10px;
-
                     }
 
-                    & img {
-                        width: 75%;
-                        transform: rotate(-35deg);
-                    }
+                    
                 }
             }
         }
